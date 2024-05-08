@@ -1,0 +1,54 @@
+path:
+  audio_feat: /home/majie/lijunhao/data/MUSIC_AVQA/feats/vggish/ # should be [T, d]; T: number of frames; d: embedding dimension.
+  ans_quelen: /home/majie/lijunhao/data/MUSIC_AVQA/json/ans-quelen.json # store the index of answers and the maximum lengths of questions.
+  video_feat: /home/majie/lijunhao/data/MUSIC_AVQA/feats/r2plus1d_18/
+  train_data: /home/majie/lijunhao/data/MUSIC_AVQA/json/avqa-train.json
+  val_data: /home/majie/lijunhao/data/MUSIC_AVQA/json/avqa-val.json
+  test_data:
+    original: /home/majie/code//2023/hcrn/preprocess/data/music-avqa/avqa-test.json
+    extend: /home/majie/code/2023/hcrn/preprocess/data/music-avqa/avqa-test-headtail.json
+    extend-head: /home/majie/code//2023/hcrn/preprocess/data/music-avqa/avqa-test-head.json
+    extend-tail: /home/majie/code//2023/hcrn/preprocess/data/music-avqa/avqa-test-tail.json
+  save_model: /home/majie/lijunhao/ravqa/save_model/
+  log_name: /home/majie/lijunhao/ravqa/data/bias-md.txt    #
+
+model_name: 'sens-0'           #
+log_interval: 50
+run_mode: train # select train or test
+test_mode: # set test split
+  original: True
+  extend: False
+  extend-head: False
+  extend-tail: False
+
+hyper_para:
+  batch_size: 64
+  eval_batch_size: 128
+  train_num_workers: 8
+  eval_num_workers: 8
+  bias_learner:
+    three_bias_learner_exist: True
+    q_bias: True
+    a_bias: True
+    v_bias: True
+  loss_weight:
+    major_loss_weight: 1
+    distribution_loss_weight: 0.01     # 0.01
+    euclidean_distance_fusion_q_weight: 0.333
+    euclidean_distance_fusion_a_weight: 0.333
+    euclidean_distance_fusion_v_weight: 0.333
+    cycle_Kl_loss_weight: 0.333
+    cycle_KL_a_q_weight: 0.333
+    cycle_KL_q_v_weight: 0.333
+    cycle_KL_v_a_weight: 0.333
+  epochs: 150
+  gpu: '2'      #
+  lr: 0.000030   #
+  scheduler_step: 20    #
+  scheduler_gamma: 0.5  #
+  mlp:
+    input_dim: 768
+    dimensions: [ 768, 768, 42 ]
+  num_labels: 42 # number of answers
+  seed: 42
+  sample: False
