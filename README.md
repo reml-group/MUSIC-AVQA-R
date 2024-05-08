@@ -71,14 +71,14 @@ We directly utilized the audio and video features provided in ***MUSIC-AVQA***. 
 
 ### Training
 
-1. set hyper parameters in [option.yaml](./optional.yaml),  configure the `run_mode` parameter as "**train**", and specify the parameters under the `path` section.
+1. set hyper parameters in [option.yaml](./option.yaml),  configure the `run_mode` parameter as "**train**", and specify the parameters under the `path` section.
 2. ```bash
     python main.py
     ```
 
 ### Evaluation
 
-1. set hyper parameters in [option.yaml](./optional.yaml),  configure the `run_mode` parameter as "**test**", and specify the parameters under the `path` section.
+1. set hyper parameters in [option.yaml](./option.yaml),  configure the `run_mode` parameter as "**test**", and specify the parameters under the `path` section.
 
 2. ```bash
    python main.py
