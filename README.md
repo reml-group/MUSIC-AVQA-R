@@ -49,7 +49,7 @@ We utilized the [QuillBot](https://quillbot.com/paraphrasing-tool) to rephrase e
 
 - Demo
 
-	<div align=center ><img src="./images/dataset_demo.png" style="zoom: 30%;" ></div>
+	<div align=center ><img src="./images/dataset_demo.png" style="transform: scale(0.5);"></div>
 
 <center>Figure 4. Demo in MUISC-AVQA-R</center>
 
