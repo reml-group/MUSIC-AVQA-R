@@ -1,9 +1,9 @@
 # Look, Listen, and Answer: Overcoming Biases for Audio-Visual Question Answering
 This repository contains the ***MUSIC-AVQA-R*** dataset , as proposed in [Look, Listen, and Answer: Overcoming Biases for Audio-Visual Question Answering](https://arxiv.org/abs/2404.12020), as well as the code implementation of ***the Multifaceted Cycle Collaborative Debiasing (MCCD)*** method.
 
-<div align=center><img src="./images/model-arcv2.jpg" style="zoom:60%;"></div>
+<p align=center><img src="./images/model-arcv2.jpg" width="1024px"></p>
 
-<center>Figure 1: Robust AVQA architecture to overcome bias learning. Our MCCD strategy is plug-and-play,allowing seamless integration with other AVQA methods.</center>
+<p align="center">Figure 1: Robust AVQA architecture to overcome bias learning. Our MCCD strategy is plug-and-play,allowing seamless integration with other AVQA methods.</p>
 
 ## Dataset
 
@@ -13,19 +13,19 @@ We followed the previous work in partitioning the dataset into "head" and "tail"
 
 The sizes of our MUSIC-AVQA-R dataset are presented in **Table 1** and **Table 2**. We present it based on different question scenarios and question types.
 
-<center>Table 1. Test split comparison between MUSIC-AVQA and MUSIC-AVQA-R. EXIST, LOC, CNT, COMP, and TEMP, which are question types, denote “Existential”, “Location”, “Counting”, “Comparative”, and “Temporal”, respectively.</center>
+<p align="center">Table 1. Test split comparison between MUSIC-AVQA and MUSIC-AVQA-R. EXIST, LOC, CNT, COMP, and TEMP, which are question types, denote “Existential”, “Location”, “Counting”, “Comparative”, and “Temporal”, respectively.</p>
 
-<div align=center><img src="./images/distribution.jpg" style="zoom:50%;"></div>
+<p align=center><img src="./images/distribution.jpg" width="1024px"></p>
 
-<center>Table 2. The sizes of head and tail subsets for different question types in MUSIC-AVQA-R, which are divided based on their corresponding  μ(a).</center>
+<p align="center">Table 2. The sizes of head and tail subsets for different question types in MUSIC-AVQA-R, which are divided based on their corresponding  μ(a).</p>
 
-<div align=center><img src="./images/head_tail_count.png"  style="zoom:55%;"></div>
+<p align=center><img src="./images/head_tail_count.png"  width="1024px"></p>
 
 - example
 
-  <div align=center><img src="./images/Audio-Visual_Location.jpg" style="zoom:50%;"></div>
+  <p align=center><img src="./images/Audio-Visual_Location.jpg" width="768px"></p>
 
-<center>Figure 2: Answer distributions of the "location" type of questions in the AVQA task. μ(a) is the average number of answers in the group</center>
+<p align="center">Figure 2: Answer distributions of the "location" type of questions in the AVQA task. μ(a) is the average number of answers in the group</p>
 
 In this scenario, answers such as "yes," "no," "left," and others, whose total count exceeds $1.2\mu(a)$, are divided as "head." The remaining answers such as "accordion", "tuba" and so forth, are divided as "tail."
 
@@ -43,17 +43,18 @@ We utilized the [QuillBot](https://quillbot.com/paraphrasing-tool) to rephrase e
 
 **Figure 2** displays the first three words in ***MUSIC-AVQA-R*** and ***MUSIC-AVQA***. Intuitively, we observe that questions in ***MUSIC-AVQA-R*** are more diverse than those in ***MUSIC-AVQA*** in terms of their expression.
 
-<div align=center><img src="./images/comparison_of_first_3_words.png" style="zoom:70%;"></div>
+<p align=center><img src="./images/comparison_of_first_3_words.png" width="768px"></p>
 
-<center>Figure 3:  Distribution visualization of questions based on the first three words.</center>
+<p align="center">Figure 3:  Distribution visualization of questions based on the first three words.</p>
 
 - Demo
 
-	<div align=center ><img src="./images/dataset_demo.png" style="transform: scale(0.5);"></div>
+	<p align=center ><img src="./images/dataset_demo.png" width="640px"></p>
 
-<center>Figure 4. Demo in MUISC-AVQA-R</center>
 
-In the test set demo, we include audio, video, and corresponding questions. In this example, the question template is "**Is the <Object> in the video always playing?**" After rephrasing with the tool, the question becomes "**Does the cello in the video play all the time**," which maintains the same meaning as the original question but with a different expression.
+<p align="center">Figure 4. Demo in MUISC-AVQA-R</p>
+
+In the test set demo, we include audio, video, and corresponding questions. In this example, the question template is "**Is the \<Object\> in the video always playing?**" After rephrasing with the tool, the question becomes "**Does the cello in the video play all the time**," which maintains the same meaning as the original question but with a different expression.
 
 ## Usage
 
@@ -86,9 +87,9 @@ We directly utilized the audio and video features provided in ***MUSIC-AVQA***. 
 
 ## Case Study
 
-<img src="./images/case_study.png" style="zoom:50%;" />
+<img src="./images/case_study.png" style="zoom:50%;" >
 
-<center>Figure 5. Attention weight visualization on the uniformly sampled audio and video frames. We can see that our method can focus on the key audio and video frames for QA simultaneously in both in- and out-of-distribution settings</center>
+<p align="center">Figure 5. Attention weight visualization on the uniformly sampled audio and video frames. We can see that our method can focus on the key audio and video frames for QA simultaneously in both in- and out-of-distribution settings</p>
 
 ## Citation
 
