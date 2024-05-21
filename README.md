@@ -94,8 +94,13 @@ We directly utilized the audio and video features provided in ***MUSIC-AVQA***. 
 
 If you find our work useful in your research, please consider citing:
 
-```tex
-
+```
+@article{ma2024look,
+  title={Look, Listen, and Answer: Overcoming Biases for Audio-Visual Question Answering},
+  author={Ma, Jie and Hu, Min and Wang, Pinghui and Sun, Wangchun and Song, Lingyun and Pei, Hongbin and Liu, Jun and Du, Youtian},
+  journal={arXiv preprint arXiv:2404.12020},
+  year={2024}
+}
 ```
 
 ## Acknowledgement
